@@ -1,0 +1,47 @@
+# VARIABLES
+# Uppercase by convention
+NAME="Abdallah"
+echo "My name is $NAME
+
+
+# USER INPUT
+read -p "Enter your name: " Name
+echo "Hello $NAME, nice to meet you!"
+
+# SIMPLE IF STATEMENT
+if [ "$NAME" == "Abdallah" ]
+then
+  echo "Your name is Abdallah"
+fi
+
+
+# IF-ELSE
+if [ "$NAME" == "Abdallah" ]
+then
+  echo "Your name is Abdallah"
+else
+  echo "Your name is NOT Abdallah"
+fi
+
+
+# ELSEIF (elif)
+if [ "$NAME" == "Abdallah" ]
+then
+  echo "Your name is Abdallah"
+elif [ "$NAME" == "Shaddai" ]
+then
+  echo "Your name is Shaddai
+else
+  echo "Your name is NOT Abdallah or Shaddai"
+if
+
+
+# COMPARISON
+##########
+# val1 -eq val2 Returns true if the values are equal
+# val1 -ne val2 Returns true if the values are equal
+# val1 -gt val2 Returns true if the values are equal
+# val1 -ge val2 Returns true if the values are equal
+# val1 -lt val2 Returns true if the values are equal
+# val1 -le val2 Returns true if the values are equal
+##########
