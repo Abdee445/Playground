@@ -1,2 +1,2 @@
-# gitplaytree
-my personal space or learning git
+# Playground
+my personal space for learning
