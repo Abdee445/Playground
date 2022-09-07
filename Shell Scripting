@@ -4,15 +4,20 @@ NAME="Abdallah"
 echo "My name is $NAME
 
 
+
 # USER INPUT
 read -p "Enter your name: " Name
 echo "Hello $NAME, nice to meet you!"
+
+
 
 # SIMPLE IF STATEMENT
 if [ "$NAME" == "Abdallah" ]
 then
   echo "Your name is Abdallah"
 fi
+# This tests a condition
+
 
 
 # IF-ELSE
@@ -22,6 +27,8 @@ then
 else
   echo "Your name is NOT Abdallah"
 fi
+# This tests a condition and returns outputs for sucess or failiure
+
 
 
 # ELSEIF (elif)
@@ -34,6 +41,8 @@ then
 else
   echo "Your name is NOT Abdallah or Shaddai"
 if
+# This tests a condition and alternate conditions and returns outputs
+
 
 
 # COMPARISON
@@ -45,3 +54,117 @@ if
 # val1 -lt val2 Returns true if the values are equal
 # val1 -le val2 Returns true if the values are equal
 ##########
+
+NUM1=3
+NUM2=5
+if [ "$NUM1" -gt "NUM2" ]
+then
+  echo "$NUM1 is greater than $NUM2"
+else
+  echo "$NUM1 is less than $NUM2"
+fi
+# This is used to compare variables
+
+
+
+# FILE CONDITIONS
+##########
+# -d file   True if the file is a directory
+# -e file   True if the file exists (it is not portable thus -f is generally used
+# -f file   True if the provided srtring is a file
+# -g file   True if the group id is set on a file
+# -r file   True if the file is readable
+
+FILE="test.txt"
+if [ -f "$FILE" ]
+then 
+  echo "$File is a file"
+else
+  echo "$FILE is not a file"
+fi
+# The text within the output of the conditionals should be modified according to the condition used (-d,-e,-f, e.t.c)
+
+
+
+#CASE STATEMENT
+read -p "Are you 21 or over? Y/N " ANSWER
+case "$ANSWER" in
+  [yY] | [yY][eE][sS])     #y or Y OR Yes or YES or yEs ... are all valid
+    echo  "You can drive a car :)"
+    ;;
+  [nN] | [nN][oO])     #n or N OR No or NO or nO or no .. are all valid
+    echo "Sorry, try again when you're older :("
+    ;;
+  *)     
+    echo "Please enter y/yes or n/no"
+    ;;
+esac
+# This tests conditions as in cases
+# when should i use case instead of if?
+# ) is used to close arguments
+# ;; is used to end case instance
+# *) acts as switch i.e to end the series of cases
+# esac is used to end case command
+
+
+
+# SIMPLE FOR LOOP
+NAMES="Musa Shaddai Bulus"
+for NAME in $NAMES
+  do echo "Hello $NAME"
+done
+# This says hello to everybody one after the other
+
+
+
+# FOR LOOP TO RENAME FILES
+FILES=$(ls *.txt)
+NEW="new"
+for FILE in $FILES
+  do
+    echo "Renaming $FILE to new-$FILE"
+    mv $FILE $NEW-$FILE
+done
+# This renames all files (appends the value of $NEW to the begining of the file name)
+
+
+
+# WHILE LOOP - READ THROUGH A FILE LINE BY LINE
+LIBE=1
+while read -r CURRENT_LINE
+  do
+    echo "$LINE: $CURRENT_LINE"
+    ((LINE++))
+done < ".new-file.txt
+# This reads a text file line by line, but wait a minute... where did the CURRENT_LINE jump in from?
+
+
+
+# FUNCTION
+function sayHello() {
+  echo "Hello World"
+}
+# This is a function
+# function - function declaration
+# sayHello - function name
+# () - Contains argument i.e empty in this case
+# {} -contains statement i.e echo "Hello World" in this case
+
+
+
+# FUNCTION WITH PARAMS
+function greet() {
+  echo "Hello, I am $1 and I am $2"
+}
+
+greet "Brad" "36"
+# This is a function that uses positional parameters
+
+
+
+# CREATE FOLDER AND WRITE TO A FILE
+mkdir hello
+touch "hello/world.txt"
+echo "Hello World" >> "Hello/world.txt"
+echo "Created hello/world.txt"
+# This is using the echo command to write into a text
