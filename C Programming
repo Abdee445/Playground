@@ -1,0 +1,20 @@
+/***What is C?***
+* - A procedural language with all its code insidde a function which acts as a source code for a program.
+* - It has to be compliled with a compiler, in my case, gcc to create an executable file
+*/
+
+/*** Comments ***
+* Comments are done using /*text to be commented*/ /*as in css, comments dont  nest lol
+/*
+
+/***Variables***
+* Data types: signed(without typing signed) and unsigned: char (1byte|255), short (2bytes|65,535), int (4bytes|4,294,967,295), long (8bytes|18,446,744,073,709,551,615)
+* Declaration: 
+    syntax: type var_name;
+    example: int i;
+    Names of variables: [a-zA-Z_][a-zA-Z_0-9]* i.e cannot start with numbers, and cannot contain specal characters and whitespaces
+* Arrays: Multiple items of same type assigned to a variable
+* Declaration:
+    syntax: type var_name [no_of_items]
+    example: int my_array_of_arrays [6][9];
+* Structures: Improvised data type declaration for a group of variables to be placed under one name in memory
