@@ -10,11 +10,34 @@
 /***Variables***
 * Data types: signed(without typing signed) and unsigned: char (1byte|255), short (2bytes|65,535), int (4bytes|4,294,967,295), long (8bytes|18,446,744,073,709,551,615)
 * Declaration: 
-    syntax: type var_name;
-    example: int i;
+    - syntax: type var_name;
+    - example: int i;
     Names of variables: [a-zA-Z_][a-zA-Z_0-9]* i.e cannot start with numbers, and cannot contain specal characters and whitespaces
 * Arrays: Multiple items of same type assigned to a variable
-* Declaration:
-    syntax: type var_name [no_of_items]
-    example: int my_array_of_arrays [6][9];
+  Declaration:
+    - syntax: type var_name [no_of_items]
+    - example: int my_array_of_arrays [6][9];
 * Structures: Improvised data type declaration for a group of variables to be placed under one name in memory
+    - syntax: sruct structure_name {
+                type name;
+                type name;
+                type name;
+              };
+              struct structure_name var_name;
+      This is very similar to objects i.e having different variable types under the same umbrella
+    -  example: struct car_properties {
+                    char name;
+                    int price;
+                    int no_tyres;
+                    char paint;
+                };
+                struct car_properties my_car;
+    - The above examples are for creation and declaration
+* Arrays and Structures
+    - Arrays of structures: struct new_struct var_array[14];
+    - Structre with structure: struct student {
+                                    char first_name[5];
+                                    char lst_name[5];
+                                    struct address addr;
+                               }
+/***Functions, Programs***/
